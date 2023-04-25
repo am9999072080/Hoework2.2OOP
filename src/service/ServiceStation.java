@@ -20,6 +20,7 @@ public class ServiceStation implements ServiceStations {
                 Truck truck = trucks[i];
                 System.out.println("Обслуживаем " + truck.getModelName());
                 truck.updateTyre();
+                truck.checkEngine();
                 truck.checkTrailer();
             }
         } else {
