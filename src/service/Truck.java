@@ -1,46 +1,25 @@
 package service;
 
-public class Truck {
-    private String modelName;
-    private int wheelsCount;
+public class Truck extends Transport {
 
     public Truck(String modelName, int wheelsCount) {
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
+        super(modelName, wheelsCount);
     }
 
-    public void updateTyre() {
-
-        System.out.println("Меняем покрышку, количество = " + wheelsCount);
+    @Override
+    public void serv() {
+        super.serv();
+        checkEngine();
+        checkTrailer();
     }
 
-    public void checkEngine() {
-
+    private void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
 
-    public void checkTrailer() {
+    private void checkTrailer() {
 
         System.out.println("Проверяем прицеп");
-    }
-
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
-
-        this.modelName = modelName;
-    }
-
-    public int getWheelsCount() {
-
-        return wheelsCount;
-    }
-
-    public void setWheelsCount(int wheelsCount) {
-
-        this.wheelsCount = wheelsCount;
     }
 }
 
